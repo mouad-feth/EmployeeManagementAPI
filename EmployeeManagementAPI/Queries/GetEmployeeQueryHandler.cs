@@ -17,21 +17,7 @@ namespace EmployeeManagementApi.Queries
 
         }
 
-        /*
-        public async Task<Employee> Handle(GetEmployeeQuery request, CancellationToken cancellationToken)
-        {
-            try
-            {
-
-                return await _context.Employees.FindAsync(request.Id);
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException($"Error occurred while retrieving employee with ID {request.Id}", ex);
-            }
-
-        }
-        */
+        
         public async Task<Employee> Handle(GetEmployeeQuery request, CancellationToken cancellationToken)
         {
             try
