@@ -26,7 +26,7 @@ namespace EmployeeManagementApi.Controllers
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        // GET: api/Employees
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmployeeDto>>> GetEmployees()
         {
@@ -36,7 +36,7 @@ namespace EmployeeManagementApi.Controllers
             return Ok(employeeDtos);
         }
 
-        // GET: api/Employees/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<EmployeeDto>> GetEmployee(Guid id)
         {
@@ -52,7 +52,7 @@ namespace EmployeeManagementApi.Controllers
             return Ok(employeeDto);
         }
 
-        // PUT: api/Employees/5
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(Guid id, UpdateEmployeeCommand command)
         {
@@ -66,7 +66,7 @@ namespace EmployeeManagementApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Employees
+       
         [HttpPost]
         public async Task<ActionResult<EmployeeDto>> PostEmployee(CreateEmployeeCommand command)
         {
@@ -77,7 +77,7 @@ namespace EmployeeManagementApi.Controllers
             return CreatedAtAction("GetEmployee", new { id = employee.Id }, employeeDto);
         }
 
-        // DELETE: api/Employees/5
+        
         [HttpDelete("{id}")]
        
          public async Task<IActionResult> DeleteEmployee(Guid id)
